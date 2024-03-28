@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import PlusSvg from "../../assets/svg/PlusSvg";
-import { Activity, Disc3, Music } from "lucide-react";
+import { Activity, Music } from "lucide-react";
 
 export const Gradient = () => {
   return (
@@ -28,10 +28,10 @@ export const BottomLine = () => {
 const Rings = () => {
   return (
     <>
-      <div className="absolute  top-1/2 left-1/2 w-[65.875rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute top-1/2 left-1/2 w-[51.375rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute top-1/2 left-1/2 w-[36.125rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute flex items-center justify-center top-1/2 left-1/2 w-[23.125rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute  top-1/2 left-1/2 w-[65.875rem] aspect-square border border-color-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 left-1/2 w-[51.375rem] aspect-square border border-color-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 left-1/2 w-[36.125rem] aspect-square border border-color-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute flex items-center justify-center top-1/2 left-1/2 w-[23.125rem] aspect-square border border-color-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2">
     
       </div>
     </>
@@ -46,7 +46,7 @@ export const BackgroundCircles = ({ parallaxRef }: any) => {
   }, []);
 
   return (
-    <div className="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
+    <div className="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-color-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
       <Rings />
 
     

@@ -126,6 +126,11 @@ const config = {
         "benefit-card-6": "url(assets/benefits/card-6.svg)",
       },
       keyframes: {
+        flip: {
+          to: {
+            transform: "rotate(360deg)"
+          }
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -136,9 +141,16 @@ const config = {
         },
       },
       animation: {
+        flip: "flip 6s infinite steps(2, end)",
+        rotate: "rotate 3s linear infinite both",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    rotate: {
+
+        transform: "rotate(90deg)"
+     
+    }
     },
   },
   plugins: [

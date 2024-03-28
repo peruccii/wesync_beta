@@ -1,4 +1,5 @@
 import ContextPageOne from "@/components/@initial_page/components/ctxpage_1";
+import ContextPageSecond from "@/components/@initial_page/components/ctxpage_2";
 import Header from "@/components/@initial_page/components/header";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
           disableTransitionOnChange
         >
           <ContextPageOne />
+          <ContextPageSecond/>
         </ThemeProvider>
       </div>
     </>
