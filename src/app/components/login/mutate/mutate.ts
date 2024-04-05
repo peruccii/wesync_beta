@@ -1,10 +1,9 @@
 import { useMutation } from "@tanstack/react-query"
-import { AxiosError } from "axios"
 import { LoginService } from "../service/service"
+import { UserProps } from "@/app/@core/domain/entities/user"
 
-export const useMutateLogin = (props: BodyRequest = {}) => {
-  return useMutation<AxiosError<string>, Login>({
-    mutationFn: bodyRequest => LoginService(bodyRequest),
-    ...props,
+export const useMutateLogin = () => {
+  return useMutation({
+    mutationFn: (props: UserProps) => LoginService(props),
   })
 }

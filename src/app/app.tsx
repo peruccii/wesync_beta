@@ -1,24 +1,17 @@
-import ContextPageOne from "@/components/@initial_page/components/ctxpage_1";
-import ContextPageSecond from "@/components/@initial_page/components/ctxpage_2";
-import Header from "@/components/@initial_page/components/header";
-import { ThemeProvider } from "@/components/ui/theme-provider";
-const App = () => {
-  return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ContextPageOne />
-          <ContextPageSecond/>
-        </ThemeProvider>
-      </div>
-    </>
-  );
-};
+'use client'
 
-export default App;
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import FirstPage from "./page";
+import { ErrorPage } from "./errors/error-page";
+
+function App() {
+    return <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<FirstPage/>}></Route>
+            <Route path="/products" element={<p>Products page</p>}></Route>
+            <Route path="*" element={<ErrorPage/>}></Route>
+        </Routes>
+    </BrowserRouter>
+}
+
+export default App

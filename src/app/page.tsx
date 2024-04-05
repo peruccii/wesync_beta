@@ -1,13 +1,20 @@
 'use client'
-import { RouterProvider } from "react-router-dom"
-import { Router } from "react-router-dom";
-import { router } from "./routes"
-
-export default function Home() {
-  
+import ContextPageOne from "@/components/@initial_page/components/ctxpage_1";
+import ContextPageSecond from "@/components/@initial_page/components/ctxpage_2";
+import Header from "@/components/@initial_page/components/header";
+import StandardErrorBoundary from "./errors/handleErrors";
+const FirstPage = () => {
   return (
-
-      <RouterProvider router={router} />
-  
+    <>
+      <StandardErrorBoundary>
+        <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+          <Header />
+          <ContextPageOne />
+          <ContextPageSecond />
+        </div>
+      </StandardErrorBoundary>
+    </>
   );
-}
+};
+
+export default FirstPage;

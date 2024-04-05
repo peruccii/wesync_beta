@@ -58,7 +58,7 @@ export const BackgroundCircles = ({ parallaxRef }: any) => {
           
         </div>
 
-        <Activity />
+        <Activity color="red" />
 
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
           <div

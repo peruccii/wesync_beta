@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { queryClient } from "@/lib/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
+import StandardErrorBoundary from "./errors/handleErrors";
+import ErrorBoundary from "./errors/handleErrors";
+import App from "./app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={inter.className}>{children}</body>
+      <QueryClientProvider client={queryClient}>
+        <body className={inter.className}>
+          <StandardErrorBoundary><App/></StandardErrorBoundary>
+        </body>
+      </QueryClientProvider>
     </html>
   );
 }

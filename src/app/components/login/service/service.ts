@@ -1,8 +1,13 @@
-import { http } from "@/utils/http"
+import { CreateUserUseCase } from "@/app/@core/application/user/create-user.use-case";
+import { UserProps } from "@/app/@core/domain/entities/user"
+import { UserGateway } from "@/app/@core/domain/gateways/user/user.gateway";
+import { Registry, container } from "@/app/@core/infra/containers/user/container-registry";
 
-  export const LoginService = async (bodyRequest: Login) => {
-    const { data } = await http.post('/login', {
-      body: { bodyRequest }
-    })
-    return data
-  }
+
+export const LoginService = async (bodyRequest: UserProps) => {
+  const usuarioGateway = container.get(Registry.UserGateway) as UserGateway;
+  const cadastro = await new CreateUserUseCase(usuarioGateway).execute({
+    ...bodyRequest,
+  });
+  return cadastro
+}

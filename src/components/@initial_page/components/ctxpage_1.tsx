@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button"
+
 import Section from "./section"
 import { useLayoutEffect, useRef } from "react"
 import gsap from 'gsap'
 import { BackgroundCircles } from "@/components/design/Hero"
 import { heroBackground } from "@/assets"
 import { ChevronDown } from "lucide-react"
+import { LoginPage } from "@/app/pages/loginPage"
+
 
 const ContextPageOne = () => {
   const parallaxRef = useRef(null);
@@ -41,9 +43,7 @@ const ContextPageOne = () => {
             Upgrade your productiviu
           </p>
           <div className="flex flex-col gap-2  mx-auto items-center">
-            <Button variant='default' size='getstarted' id="button-get-started">
-              Get started
-            </Button>
+            <LoginPage/>
             <div>
               <button className="mt-14 relative inline-flex overflow-hidden rounded-full p-px">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#c2c2c2_0%,#505050_50%,#bebebe_100%)]" />

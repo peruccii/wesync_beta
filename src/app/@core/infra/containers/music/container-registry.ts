@@ -1,5 +1,5 @@
 import { Container } from "inversify";
-import { MusicHttpGateway } from "./gateways/music-http.gateway";
+import { MusicHttpGateway } from "../../gateways/music-http.gateway";
 import { http } from "@/utils/http";
 
 export const Registry = {
