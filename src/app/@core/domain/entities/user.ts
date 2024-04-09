@@ -4,7 +4,7 @@ export type UserProps = {
  password: string;
  email: string;
  photo?: string;
- status?: string;
+ status?: 'ATIVO' | 'INATIVO';
 }
 
 export class User {
