@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAw25gKs_Vr6mmiudLVOTg-NF_vu4d5830",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "wesync-eda01.firebaseapp.com",
   projectId: "wesync-eda01",
   storageBucket: "wesync-eda01.appspot.com",

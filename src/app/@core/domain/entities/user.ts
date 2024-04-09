@@ -1,6 +1,6 @@
 export type UserProps = {
  id?: number | null;
- name: string;
+ name?: string;
  password: string;
  email: string;
  photo?: string;

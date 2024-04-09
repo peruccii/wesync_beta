@@ -36,8 +36,12 @@ const config = {
             11: "#1B1B2E",
             12: "#2E2A41",
             13: "#6C7275",
-            14: '#E51C40'
+            14: '#E51C40',
+            icons: '#FF6363'
           },
+        },
+        borderColor: {
+          orangebase: "#F39C01",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -106,6 +110,9 @@ const config = {
         4: "4",
         5: "5",
       },
+     backgroundColor: {
+      orangebase: "#F39C01"
+     },
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
@@ -113,17 +120,6 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      backgroundImage: {
-        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        "conic-gradient":
-          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-        "benefit-card-1": "url(assets/benefits/card-1.svg)",
-        "benefit-card-2": "url(assets/benefits/card-2.svg)",
-        "benefit-card-3": "url(assets/benefits/card-3.svg)",
-        "benefit-card-4": "url(assets/benefits/card-4.svg)",
-        "benefit-card-5": "url(assets/benefits/card-5.svg)",
-        "benefit-card-6": "url(assets/benefits/card-6.svg)",
       },
       keyframes: {
         flip: {
