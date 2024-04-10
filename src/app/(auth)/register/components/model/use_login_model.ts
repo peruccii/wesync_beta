@@ -14,14 +14,16 @@ export const useRegister = () => {
   } = useForm<User>({ resolver: zodResolver(loginFormSchema)})
   const { photoDefault } = useFirebase()
   const mutateLogin  = useMutateLogin()
+  let delay = false
 
   const onSubmit = (data: UserProps) => mutateLogin.mutate({
     ...data,
     photo: photoDefault,
     status: 'ATIVO'
   })
+ 
+  mutateLogin.isSuccess ? delay = true : delay
 
-
-  return { handleSubmit, register, errors, onSubmit, getValues}
+  return { handleSubmit, delay, register, errors, onSubmit, getValues}
 
 }

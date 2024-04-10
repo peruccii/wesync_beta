@@ -23,6 +23,7 @@ const config = {
       colors: {
         color: {
           n: {
+            principal: '#040202',
             1: "#FFFFFF",
             2: "#CAC6DD",
             3: "#ADA8C3",

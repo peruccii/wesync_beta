@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { ErrorPage } from "./error-page";
+import ErrorPage from "../error";
 
 interface ErrorBoundaryState {
   hasError: boolean;

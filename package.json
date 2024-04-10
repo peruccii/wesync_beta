@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "firebase": "^10.10.0",
+    "framer-motion": "^11.0.27",
     "gsap": "^3.12.5",
     "inversify": "^6.0.2",
     "lucide": "^0.363.0",
