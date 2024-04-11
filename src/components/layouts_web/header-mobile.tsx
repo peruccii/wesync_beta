@@ -64,9 +64,7 @@ const HeaderMobile = () => {
 
           return (
             <div key={idx}>
-              {item.submenu ? (
-                <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
-              ) : (
+               (
                 <MenuItem>
                   <Link
                     href={item.path}
@@ -78,8 +76,7 @@ const HeaderMobile = () => {
                     {item.title}
                   </Link>
                 </MenuItem>
-              )}
-
+              )
               {!isLastItem && (
                 <MenuItem className="my-3 h-px w-full bg-gray-300" />
               )}
@@ -174,27 +171,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
           </div>
         </button>
       </MenuItem>
-      <div className="mt-2 ml-2 flex flex-col space-y-2">
-        {subMenuOpen && (
-          <>
-            {item.subMenuItems?.map((subItem, subIdx) => {
-              return (
-                <MenuItem key={subIdx}>
-                  <Link
-                    href={subItem.path}
-                    onClick={() => toggleOpen()}
-                    className={` ${
-                      subItem.path === pathname ? 'font-bold' : ''
-                    }`}
-                  >
-                    {subItem.title}
-                  </Link>
-                </MenuItem>
-              );
-            })}
-          </>
-        )}
-      </div>
+
     </>
   );
 };

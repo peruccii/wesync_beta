@@ -6,28 +6,31 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     
     path: '/home',
-    icon: <Home color="#ffffff" />,
+    tooltip: 'Home',
+    icon: <Home size={20} color="#ffffff" />,
   },
   {
    
     path: '/playlists',
-    icon: <ListVideo color="#ffffff" />,
-    submenu: true,
+    tooltip: 'Playlists',
+    icon: <ListVideo size={20} color="#ffffff" />,
   },
   {
    
     path: '/likes',
-    icon: <Heart color="#ffffff" />,
+    tooltip: 'Liked',
+    icon: <Heart size={20} color="#ffffff" />,
   },
   {
    
     path: '/settings',
-    icon: <Settings color="#ffffff" />,
-    submenu: true,
+    tooltip: 'Settings',
+    icon: <Settings size={20} color="#ffffff" />,
   },
   {
 
     path: '/help',
-    icon: <MessageCircleQuestion color="#ffffff" />,
+    tooltip: 'Help',
+    icon: <MessageCircleQuestion size={20} color="#ffffff" />,
   },
 ];
